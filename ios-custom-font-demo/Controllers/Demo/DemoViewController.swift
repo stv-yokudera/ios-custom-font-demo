@@ -10,12 +10,12 @@ import UIKit
 
 final class DemoViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var imageView1: UIImageView!
-    @IBOutlet weak var imageView2: UIImageView!
-    @IBOutlet weak var imageView3: UIImageView!
-    @IBOutlet weak var imageView4: UIImageView!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var imageView1: UIImageView!
+    @IBOutlet private weak var imageView2: UIImageView!
+    @IBOutlet private weak var imageView3: UIImageView!
+    @IBOutlet private weak var imageView4: UIImageView!
+    @IBOutlet private weak var button: UIButton!
     
     // MARK: - view life cycle
     
@@ -29,7 +29,7 @@ final class DemoViewController: UIViewController {
     private func setText() {
         
         // UILabelのattributedTextにcustom fontをセット
-        guard let font = UIFont(name: "icomoon", size: 20) else { return }
+        guard let font = UIFont(name: FontName.icomoon, size: 20) else { return }
         let attributedString = NSAttributedString(string: "custom icon font: " + IconFont.tongue.rawValue,
                                                   attributes: [NSFontAttributeName: font])
         label.attributedText = attributedString

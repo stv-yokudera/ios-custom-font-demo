@@ -23,7 +23,7 @@ extension UIImage {
                         rect: CGSize = CGSize(width: 20.0, height: 20.0),
                         color: UIColor = .blue) -> UIImage? {
         
-        guard let font = UIFont(name: "icomoon", size: fontSize) else { return nil }
+        guard let font = UIFont(name: FontName.icomoon, size: fontSize) else { return nil }
         UIGraphicsBeginImageContextWithOptions(rect, false, 0.0)
         let attributes = [NSForegroundColorAttributeName: color,
                           NSFontAttributeName: font]
